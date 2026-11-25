@@ -1,0 +1,335 @@
+/* 1. Basic Reset & Body Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f8faf8; /* Soft Off-White */
+    color: #222222;
+    line-height: 1.6;
+}
+
+/* 2. Header & Sticky Navbar */
+header {
+    background-color: #1b5e20; /* Fresh Dark Green */
+    color: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 15px 5%;
+}
+
+header .logo h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #ffffff;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+header nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #ffb300; /* Golden Yellow on hover */
+}
+
+/* 3. Hero Banner Section */
+.hero-banner {
+    width: 100%;
+    min-height: 85vh;
+    background-image: url('https://unsplash.com');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-overlay {
+    width: 100%;
+    min-height: 85vh;
+    background: linear-gradient(135deg, rgba(27, 94, 32, 0.88), rgba(13, 59, 18, 0.78));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.hero-content {
+    max-width: 750px;
+    text-align: center;
+    color: #ffffff;
+    animation: zoomInHero 0.9s ease-out forwards;
+}
+
+@keyframes zoomInHero {
+    0% {
+        opacity: 0;
+        transform: scale(0.88);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.store-tag {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+}
+
+.hero-content h1 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    color: #e8f5e9;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Common Buttons */
+.btn {
+    display: inline-block;
+    padding: 14px 30px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #ffb300;
+    color: #1a1a1a;
+}
+
+.btn-primary:hover {
+    background-color: #ffa000;
+    transform: scale(1.07);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+}
+
+.btn-secondary:hover {
+    background-color: #ffffff;
+    color: #1b5e20;
+    transform: scale(1.07);
+}
+
+/* 4. Product Categories Section */
+.categories {
+    padding: 70px 5%;
+    text-align: center;
+}
+
+.categories h2, .about h2, .contact h2 {
+    font-size: 2.2rem;
+    color: #1b5e20;
+    margin-bottom: 40px;
+    text-transform: capitalize;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    max-width: 1150px;
+    margin: auto;
+}
+
+.card {
+    background-color: #ffffff;
+    padding: 35px 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    border-top: 4px solid #2e7d32;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Smooth Zoom-in */
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.card .icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    color: #1b5e20;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #555555;
+    font-size: 0.98rem;
+}
+
+/* 5. About & Timings Section */
+.about {
+    background-color: #e8f5e9; /* Light Mint Green */
+    padding: 70px 5%;
+    text-align: center;
+}
+
+.about-box {
+    max-width: 850px;
+    margin: auto;
+}
+
+.about-box p {
+    font-size: 1.15rem;
+    color: #333333;
+    margin-bottom: 25px;
+}
+
+.info-badges {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.badge {
+    background-color: #ffffff;
+    color: #1b5e20;
+    padding: 12px 22px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 0.98rem;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* 6. Contact & Location Section */
+.contact {
+    padding: 70px 5%;
+    text-align: center;
+}
+
+.contact-card {
+    background-color: #ffffff;
+    max-width: 650px;
+    margin: auto;
+    padding: 40px 30px;
+    border-radius: 14px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.contact-card p {
+    font-size: 1.1rem;
+    margin-bottom: 18px;
+    color: #333333;
+}
+
+.contact-card p a {
+    color: #1b5e20;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.contact-card p a:hover {
+    text-decoration: underline;
+}
+
+.action-buttons {
+    margin-top: 25px;
+}
+
+.whatsapp-btn {
+    background-color: #25D366;
+    color: #ffffff !important;
+}
+
+.whatsapp-btn:hover {
+    background-color: #1ebe5d;
+    transform: scale(1.07);
+}
+
+/* 7. Footer */
+footer {
+    background-color: #1b5e20;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.95rem;
+}
+
+/* 8. Mobile Responsive Design */
+@media (max-width: 768px) {
+    header nav {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    header nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+

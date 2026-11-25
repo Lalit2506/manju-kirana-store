@@ -1,0 +1,221 @@
+/* 1. Basic Reset & Body Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f8faf8;
+    color: #222222;
+    line-height: 1.6;
+}
+
+/* 2. Header & Sticky Navbar */
+header {
+    background-color: #1b5e20;
+    color: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 15px 5%;
+}
+
+header .logo h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #ffffff;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+header nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #ffb300;
+}
+
+/* 3. Page Top Banner */
+.page-header {
+    background: linear-gradient(135deg, #1b5e20, #2e7d32);
+    color: #ffffff;
+    text-align: center;
+    padding: 55px 20px;
+}
+
+.page-header h2 {
+    font-size: 2.3rem;
+    margin-bottom: 10px;
+}
+
+.page-header p {
+    color: #e8f5e9;
+    font-size: 1.05rem;
+}
+
+/* 4. Product Sections & Category Titles */
+.product-section {
+    padding: 50px 5% 15px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.category-title {
+    font-size: 1.6rem;
+    color: #1b5e20;
+    border-left: 5px solid #ffb300;
+    padding-left: 12px;
+    margin-bottom: 25px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+/* 5. Product Cards with Zoom-In Hover */
+.product-card {
+    background-color: #ffffff;
+    padding: 28px 20px;
+    border-radius: 12px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    border: 1px solid #e0e8e0;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.product-card:hover {
+    transform: scale(1.05); /* Smooth Zoom-in */
+    box-shadow: 0 12px 26px rgba(0, 0, 0, 0.12);
+}
+
+.product-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background-color: #ffb300;
+    color: #1a1a1a;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 12px;
+}
+
+.product-card .icon {
+    font-size: 2.8rem;
+    margin-bottom: 12px;
+}
+
+.product-card h4 {
+    font-size: 1.2rem;
+    color: #222222;
+    margin-bottom: 6px;
+}
+
+.product-card .weight {
+    font-size: 0.92rem;
+    color: #666666;
+    margin-bottom: 8px;
+}
+
+.product-card .price {
+    font-size: 1.18rem;
+    font-weight: 700;
+    color: #1b5e20;
+    margin-bottom: 18px;
+}
+
+/* 6. WhatsApp Order Button */
+.order-btn {
+    display: inline-block;
+    background-color: #25D366;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 22px;
+    border-radius: 25px;
+    font-size: 0.94rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.order-btn:hover {
+    background-color: #1ebe5d;
+    transform: scale(1.07);
+}
+
+/* 7. Floating WhatsApp Button */
+.floating-wa {
+    position: fixed;
+    bottom: 22px;
+    right: 22px;
+    background-color: #25D366;
+    color: #ffffff;
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: none;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+    z-index: 999;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.floating-wa:hover {
+    background-color: #1ebe5d;
+    transform: scale(1.08);
+}
+
+/* 8. Footer */
+footer {
+    background-color: #1b5e20;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.95rem;
+    margin-top: 50px;
+}
+
+/* 9. Mobile Responsive Design */
+@media (max-width: 768px) {
+    header nav {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    header nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .page-header h2 {
+        font-size: 1.9rem;
+    }
+}
