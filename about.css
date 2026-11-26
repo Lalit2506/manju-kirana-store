@@ -367,6 +367,87 @@ footer {
 }
 
 /* 11. Mobile Responsive */
+.comment-section {
+    background-color: #ffffff;
+    padding: 60px 5%;
+    text-align: center;
+    border-top: 1px solid #e0e8e0;
+}
+
+.comment-section h2 {
+    color: #1b5e20;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.comment-section > p {
+    color: #555555;
+    margin-bottom: 25px;
+}
+
+.customer-comments {
+    background-color: #ffffff;
+    border: 1px solid #e0e8e0;
+    border-radius: 14px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.customer-comments h2 {
+    color: #1b5e20;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#comment-form {
+    max-width: 700px;
+    margin: auto;
+    padding: 30px;
+    background-color: #f8faf8;
+    border: 2px solid #2e7d32;
+    border-radius: 14px;
+    box-shadow: 0 6px 20px rgba(46, 125, 50, 0.18);
+    text-align: left;
+}
+
+#comment-form label {
+    display: block;
+    color: #1b5e20;
+    font-weight: 600;
+    margin: 0 0 7px;
+}
+
+#comment-form input,
+#comment-form select,
+#comment-form textarea {
+    width: 100%;
+    padding: 12px 14px;
+    margin-bottom: 18px;
+    border: 1px solid #c8d8c8;
+    border-radius: 8px;
+    background-color: #ffffff;
+    color: #222222;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#comment-form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+#comment-form input:focus,
+#comment-form select:focus,
+#comment-form textarea:focus {
+    border-color: #2e7d32;
+    box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.15);
+}
+
+#comment-form .btn {
+    border: 0;
+    cursor: pointer;
+}
+
 @media (max-width: 768px) {
     header nav {
         flex-direction: column;
@@ -386,5 +467,13 @@ footer {
     .btn {
         width: 100%;
         text-align: center;
+    }
+
+    #comment-form {
+        padding: 22px 18px;
+    }
+
+    .customer-comments h2 {
+        font-size: 1.7rem;
     }
 }
