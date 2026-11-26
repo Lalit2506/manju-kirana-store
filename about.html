@@ -188,13 +188,8 @@
                 const message = document.createElement('p');
                 message.textContent = comment;
                 const author = document.createElement('h4');
-                author.textContent = '— ' + name;
+                author.textContent = '— ' + name + (address ? ', ' + address : '');
                 card.append(stars, message, author);
-                if (address) {
-                    const location = document.createElement('p');
-                    location.textContent = 'Pata: ' + address;
-                    card.append(location);
-                }
                 submittedComments.prepend(card);
             }
 
